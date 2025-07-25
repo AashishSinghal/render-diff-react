@@ -586,9 +586,9 @@ const CodeLine = ({
             }
 
             const highlightClass = part.removed
-              ? highlightDeletedClassName || defaultHighlightDeletedBg
+              ? highlightDeletedClassName || "bg-[rgba(248,81,73,0.4)]"
               : part.added
-              ? highlightAddedClassName || defaultHighlightAddedBg
+              ? highlightAddedClassName || "bg-[rgba(46,160,67,0.4)]"
               : "";
 
             const partContent = [];
