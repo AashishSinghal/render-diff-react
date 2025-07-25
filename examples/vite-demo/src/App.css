@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 /* Header */
@@ -24,7 +25,6 @@ body {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 2rem 0;
-  text-align: center;
 }
 
 .header h1 {
@@ -35,6 +35,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-align: center;
 }
 
 .subtitle {
@@ -44,6 +45,7 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .badges {
@@ -51,6 +53,7 @@ body {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .badges img {
@@ -67,12 +70,13 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
 }
 
 /* Tabs */
 .tabs {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
@@ -181,7 +185,7 @@ body {
 }
 
 .features h2 {
-  text-align: center;
+  text-align: left;
   color: white;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -222,13 +226,14 @@ body {
 /* Installation section */
 .installation {
   margin: 3rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .installation h2 {
   color: white;
   font-size: 2rem;
   margin-bottom: 2rem;
+  text-align: left;
 }
 
 .install-commands {
@@ -236,7 +241,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .command {
