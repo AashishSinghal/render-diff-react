@@ -405,11 +405,11 @@ const SplitView = ({
           const rightBg = right?.type === "add" ? defaultAddedLineBg : "";
 
           return (
-            <div key={lineIndex} className="flex">
+            <div key={lineIndex} className="flex flex-nowrap">
               {showLineNumbers && (
                 <div
                   className={cn(
-                    "px-2 py-0.5 text-right select-none w-10 flex-shrink-0",
+                    "px-2 py-0.5 text-right select-none w-10 flex-shrink-0 whitespace-nowrap",
                     lineNumberClassName,
                     left?.type === "del" && deletedLineClassName
                   )}
@@ -449,7 +449,7 @@ const SplitView = ({
               {showLineNumbers && (
                 <div
                   className={cn(
-                    "px-2 py-0.5 text-right select-none w-10 flex-shrink-0",
+                    "px-2 py-0.5 text-right select-none w-10 flex-shrink-0 whitespace-nowrap",
                     lineNumberClassName,
                     right?.type === "add" && addedLineClassName
                   )}
