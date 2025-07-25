@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -64,6 +65,7 @@ body {
 .main {
   flex: 1;
   padding: 2rem 0;
+  width: 100%;
 }
 
 .container {
@@ -71,6 +73,7 @@ body {
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
 /* Tabs */
@@ -80,6 +83,7 @@ body {
   gap: 0.5rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .tabs button {
@@ -112,6 +116,8 @@ body {
   margin-bottom: 3rem;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .example h2 {
@@ -195,6 +201,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  width: 100%;
 }
 
 .feature {
@@ -240,7 +247,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  max-width: 800px;
+  width: 100%;
   margin: 0;
 }
 
@@ -305,7 +312,7 @@ body {
 
   .tabs {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .tabs button {
