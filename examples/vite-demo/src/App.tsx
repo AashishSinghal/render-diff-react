@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { DiffViewer, injectSyntaxHighlightingStyles } from "../../../src/index";
-import "../../../src/styles.css";
+import { DiffViewer, injectSyntaxHighlightingStyles } from "render-diff-react";
+import "render-diff-react/dist/styles.css";
 import "./App.css";
 
 // Inject syntax highlighting styles
