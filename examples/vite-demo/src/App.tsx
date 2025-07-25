@@ -10,19 +10,57 @@ const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState("basic");
 
   // Example diffs
-  const basicDiff = `diff --git a/src/App.tsx b/src/App.tsx
-index 1234567..abcdefg 100644
---- a/src/App.tsx
-+++ b/src/App.tsx
-@@ -1,3 +1,4 @@
- import React from 'react';
-+import { useState } from 'react';
+  const basicDiff = `
+  diff --git a/tests/session.spec.ts b/tests/session.spec.ts
+index 8b3f0f79d..9670f7c7e 100644
+--- a/tests/session.spec.ts
++++ b/tests/session.spec.ts
+@@ -1,26 +1,44 @@
+ import { test, expect } from "./fixtures";
  
- function App() {
--  return <div>Hello World</div>;
-+  const [count, setCount] = useState(0);
-+  return <div>Hello World {count}</div>;
- }
+ test.skip("should be able to create a new session", async ({ loggedInPage }) => {
++  // Navigate to Sessions page
+   await loggedInPage.getByRole('link', { name: 'Sessions', exact: true }).click();
+   await loggedInPage.getByRole('button', { name: 'New' }).click();
++  // Create a new session with default settings
+   await loggedInPage.getByRole('button', { name: 'Create' }).click();
+-  await loggedInPage.getByPlaceholder('Type your message...').click();
++  await loggedInPage.getByPlaceholder('Type your message<>test...').click();
+   await loggedInPage.getByPlaceholder('Type your message...').fill("list all the files in the current dir");
++  // Send the message and wait for response
+   await loggedInPage.getByRole('button', { name: 'Send' }).click();
+   await expect(loggedInPage.getByText('Assistant')).toBeVisible({ timeout: 60000 });
+ });
+ 
+ test.skip("should be able to create a new session with claude model and wait for tool message", async ({ loggedInPage }) => {
++  // Navigate to Sessions page and start creating new session
+   await loggedInPage.getByRole('link', { name: 'Sessions', exact: true }).click();
+   await loggedInPage.getByRole('button', { name: 'New' }).click();
+   // Select Claude model
+   await loggedInPage.getByRole('combobox').click();
+   // Click the current model name (default GPT-3.5 Turbo) to open dropdown
+   await loggedInPage.getByRole('option', { name: 'Claude Sonnet 3.7', exact: true }).click();
++  // Create the session with Claude model selected
+   await loggedInPage.getByRole('button', { name: 'Create' }).click(); // Create the session
+   await loggedInPage.getByPlaceholder('Type your message...').click();
+   await loggedInPage.getByPlaceholder('Type your message...').fill("list all the files in the current dir and tell me their sizes");
++  // Send message and wait for tool execution results
+   await loggedInPage.getByRole('button', { name: 'Send' }).click();
+   // Wait for a message containing "tool" (case-insensitive)
+   await expect(loggedInPage.getByText('Show Result')).toBeVisible({ timeout: 60000 });
+ });
++
++test("dummy test for verification", async ({ loggedInPage }) => {
++  // This is a dummy test added for demonstration purposes
++  // It simply verifies that the logged in page loads correctly
++  await expect(loggedInPage).toHaveTitle(/Empirical/);
++  
++  // Check if the main navigation is visible
++  await expect(loggedInPage.getByRole('link', { name: 'Sessions', exact: true })).toBeVisible();
++  
++  // This test serves as a basic smoke test
++  console.log("Dummy test executed successfully");
++});
 `;
 
   const pythonDiff = `diff --git a/main.py b/main.py
