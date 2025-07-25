@@ -346,7 +346,6 @@ const SplitView = ({
 }: SplitViewProps) => {
   const defaultSplitViewBg = theme?.splitViewBackgroundColor || "#0d1117";
   const defaultLineNumberColor = theme?.lineNumberColor || "#8b949e";
-  const defaultCodeColor = theme?.codeColor || "#c9d1d9";
   const defaultAddedLineBg =
     theme?.addedLineBackgroundColor || "rgba(46,160,67,0.15)";
   const defaultDeletedLineBg =
