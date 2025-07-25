@@ -81,11 +81,28 @@ npm run preview
 
 ## Deployment
 
-This demo can be easily deployed to:
+This demo is configured for GitHub Pages deployment:
+
+### Automatic Deployment (Recommended)
+
+1. **Push to GitHub**: The demo will automatically deploy when you push to the `main` branch
+2. **GitHub Actions**: The workflow will build and deploy to GitHub Pages
+3. **Access**: Available at `https://aashishsinghal.github.io/render-diff-react/`
+
+### Manual Deployment
+
+```bash
+# Build for production
+npm run build
+
+# Deploy using the script
+./deploy.sh
+```
+
+### Other Platforms
 
 - **Vercel**: `vercel --prod`
 - **Netlify**: `netlify deploy --prod`
-- **GitHub Pages**: Configure in GitHub Actions
 
 ## Structure
 

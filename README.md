@@ -196,7 +196,7 @@ The component uses a dark theme by default, similar to GitHub's diff view. You c
 
 ## Live Demo
 
-🚀 **[Try the interactive demo](https://render-diff-react.vercel.app)**
+🚀 **[Try the interactive demo](https://aashishsinghal.github.io/render-diff-react/)**
 
 The demo showcases all features with live examples and comprehensive documentation.
 
