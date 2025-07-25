@@ -194,6 +194,12 @@ The component comes with built-in styles that work out of the box. For syntax hi
 
 The component uses a dark theme by default, similar to GitHub's diff view. You can customize all colors and styles using the `theme` prop and various className props.
 
+## Live Demo
+
+🚀 **[Try the interactive demo](https://render-diff-react.vercel.app)**
+
+The demo showcases all features with live examples and comprehensive documentation.
+
 ## Examples
 
 ### Basic Usage
@@ -305,6 +311,18 @@ npm run build
 # Run tests
 npm test
 ```
+
+### Demo Development
+
+The interactive demo is located in `examples/vite-demo/`:
+
+```bash
+cd examples/vite-demo
+npm install
+npm run dev
+```
+
+Visit `http://localhost:3000` to see the demo in action.
 
 ## Contributing
 
