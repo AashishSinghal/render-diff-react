@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2024-07-25
+
+### Fixed
+
+- **Layout Issues**: Fixed line numbers and code not staying on same line
+- **CSS Dependencies**: Added all necessary Tailwind-equivalent styles
+- **Package Integration**: Demo now uses actual built package
+- **Build System**: CSS properly copied to dist folder
+- **TypeScript Errors**: Cleaned up reference file
+
+### Added
+
+- **GitHub Pages Deployment**: Automated deployment with GitHub Actions
+- **Production Demo**: Live demo at https://aashishsinghal.github.io/render-diff-react/
+- **Deployment Scripts**: Local and automated deployment options
+- **Layout CSS**: Complete set of layout utilities (flex, spacing, typography)
+- **Zero Dependencies**: Self-contained component with no external CSS framework
+
 ## [1.0.0] - 2024-07-25
 
 ### Added
