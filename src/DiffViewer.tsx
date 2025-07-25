@@ -263,7 +263,7 @@ const FileDiff = ({
       {showFileHeader && (
         <div
           className={cn(
-            "flex items-center gap-3 px-4 py-2 border-b",
+            "flex items-center gap-3 bg-[#161b22] px-4 py-2 border-b border-[#30363d]",
             fileHeaderClassName
           )}
           style={{
@@ -405,7 +405,7 @@ const SplitView = ({
           const rightBg = right?.type === "add" ? defaultAddedLineBg : "";
 
           return (
-            <div key={lineIndex} className="flex flex-nowrap">
+            <div key={lineIndex} className="flex">
               {showLineNumbers && (
                 <div
                   className={cn(
